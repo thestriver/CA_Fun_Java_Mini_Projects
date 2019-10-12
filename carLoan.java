@@ -1,39 +1,24 @@
-
-
-
-/**
- *
- * @author mahmud
- */
-public class CarLoan {
-	public static void main(String[] args) {
-    int carLoan = 10000;
-    int loanLength = 3;
-    int interestRate = 5;
-    int downPayment = 2000;
-    
-    //checks an invalid loan app
-    if (loanLength <= 0 || interestRate <= 0) {
-      System.out.println("Error! You must take out a valid car loan.");
-    }
-    
-    else if (downPayment >= carLoan) {
-      System.out.println("The car can be paid in full.");
-    }
-    
-    //calculates monthlypayment incl. interest
-    else {
-      int remainingBalance = carLoan - downPayment;
-      int months = loanLength * 12;
-      int monthlyBalance = remainingBalance / months;
-      int interest = (monthlyBalance *5)/100 ;
-      int monthlyPayment = monthlyBalance + interest; 
-        
-      System.out.println(monthlyPayment);
+class FizzBuzz {
+  public static void main(String[] args) {
+    for (int i = 1; i<=100; i++) {
+      
+      if ( i % 3 == 0 && i % 5 == 0) {
+        System.out.println("FizzBuzz");
+      }
+      
+      else if (i % 3 == 0) {
+        System.out.println("Fizz");
+      }
+      
+      else if (i % 5 == 0) {
+        System.out.println("Buzz");
+      }
+   
+      else {
+        System.out.println(i);
+      }
       
     }
     
-    
-
-}
+  }
 }
