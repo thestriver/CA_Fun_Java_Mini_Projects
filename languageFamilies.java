@@ -13,7 +13,7 @@ public class Language {
   } 
   
   public void getInfo() {
-
+    //PRINTS out language and estimated number of speakers 
     System.out.println(this.name + " is spoken by " + this.numSpeakers + " people mainly in " + this.regionsSpoken + ".");
     System.out.println("The language follows the word order: " + this.wordOrder);
 
