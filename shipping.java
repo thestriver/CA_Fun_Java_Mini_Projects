@@ -14,7 +14,7 @@ shipping = shippingMethod;
 
 }
 
-
+//ship method
 public void ship() {
 	if (isFilled) {
 		System.out.println("Shipping");
@@ -37,7 +37,7 @@ public void ship() {
     }
    
  	}
- 
+ //main method
   public static void main(String[] args) {
     // do not alter the main method!
     Order book = new Order(true, 9.99, "Express");

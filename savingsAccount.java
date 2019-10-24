@@ -22,7 +22,7 @@ public class SavingsAccount {
       return amountToWithdraw;  
     }
       
-      
+    //main method  
     public static void main(String[] args){
       SavingsAccount savings = new SavingsAccount(2000);
       
