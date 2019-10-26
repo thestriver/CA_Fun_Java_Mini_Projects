@@ -25,7 +25,7 @@ class PrimeDirective {
     return true;
   }
   
-  
+  //main method
   public static void main(String[] args) {
 
     PrimeDirective pd = new PrimeDirective();
