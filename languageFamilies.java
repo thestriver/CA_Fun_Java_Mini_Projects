@@ -1,5 +1,5 @@
 public class Language {
-  
+  //can be accessed by any class or even other subclasses
   protected String name;
   protected int numSpeakers;
   protected String regionsSpoken;
@@ -20,7 +20,7 @@ public class Language {
     }
   
   
-  
+  //main method
   public static void main(String[] args) {
     Language spanish = new Language("Spanish", 555000000, "Spain, Latin America, and Equatorial Guinea", "subject-verb-object");
 spanish.getInfo();
