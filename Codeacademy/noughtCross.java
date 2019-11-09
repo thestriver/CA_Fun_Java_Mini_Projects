@@ -50,7 +50,7 @@ public class NoughtCrossStart {
             thisPlayer = (thisPlayer == 'X') ? 'O' : 'X';
             
             if (board.length == 9) {
-                finished = false;
+                finished = false; //return flase
             }
             
             else if (placeCol < 0 || placeCol > 2) {
