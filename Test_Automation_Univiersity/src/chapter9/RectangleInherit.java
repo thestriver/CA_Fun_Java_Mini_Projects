@@ -1,5 +1,7 @@
 package chapter9;
 
+import chapter11.ShapeAbstract;
+
 public class RectangleInherit {
     protected  double length;
     protected  double width;
@@ -36,5 +38,6 @@ public class RectangleInherit {
     public void print(){
         System.out.println("I'm a rectangle!");
     }
+
 
 }

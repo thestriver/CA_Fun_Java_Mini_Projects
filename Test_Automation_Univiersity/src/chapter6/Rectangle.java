@@ -1,6 +1,8 @@
 package chapter6;
 
-public class Rectangle {
+import chapter11.ShapeAbstract;
+
+public class Rectangle  extends ShapeAbstract {
     private double length;
     private double width;
 
@@ -38,7 +40,7 @@ public class Rectangle {
         return (2 * length) + (2 * width);
     }
 
-
+    @Override
     public double calculateArea() {
         return length * width;
     }
