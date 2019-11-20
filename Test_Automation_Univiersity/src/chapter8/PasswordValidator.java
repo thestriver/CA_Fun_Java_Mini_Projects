@@ -3,34 +3,72 @@ package chapter8;
 import java.util.Scanner;
 
 public class PasswordValidator {
-    private static Scanner scanner = new Scanner(System.in);
-    private static String password = scanner.next();
 
-    public static void main(String[] args) {
+    private String username;
 
-        passwordValidator(password);
+    private String oldPassword;
+    private boolean valid;
+    private String errorMsg;
+
+    private static Scanner scanner;
+    private String password;
+
+    public static void passwordRules() {
+        System.out.println("The password must be at least eight characters long, " +
+                "contain an uppercase letter, contain a special character, " +
+                "not contain the username and not be the same as the old password.");
     }
 
-    public static void passwordValidator(String text) {
+    //public void login() { }
+
+    public boolean isValid() {
+        return valid;
+    }
+
+    public String notifyErrorMsg() {
+        return errorMsg;
+    }
+
+    public static void main(String[] args) {
+        passwordRules();
+        //login();
+       passwordValidator(password);
+    }
+
+    public void passwordValidator(String text) {
         /* at least 8 characters long ; contain an uppercase letter; contain a special character ; not contain a username ; not the same as old password
         * */
-        String username = ""; String oldPassword = "";
+        this.username = username;
+        this.password = password;
+
+        System.out.println("What's your username");
+        Scanner scanner = new Scanner(System.in);
+        username = scanner.next();
+        System.out.println("What's your username");
+        scanner = new Scanner(System.in);
+        password = scanner.next();
+
+        valid = true;
+        errorMsg = "";
 
         if (password.contains(username)) {
-            System.out.println("Please try another password besides your username");
+            valid = false;
+            errorMsg += "Please try another password besides your username";
         }
-        else if (password.contains(oldPassword)) {
-            System.out.println("Please try another password besides your old password");
+        if (password.contains(oldPassword)) {
+            valid = false;
+            errorMsg += "Please try another password besides your old password";
         }
-        else if (password.length() < 8) {
-            System.out.println("Please make your password at least 8 characters long");
+        if (password.length() < 8) {
+            valid = false;
+            errorMsg += "Please make your password at least 8 characters long";
         }
-        else if (password.contains("a")
-
-        for (int i = 0; i < password.length() ; i++) {
-           StringBuilder newPassword = new StringBuilder(password);
-            if (Character.isUpperCase(newPassword.charAt(i))) {
-                                            }
+        if(password.matches("[a-zA-Z0-9 ]*")){
+            valid = false;
+            errorMsg += "\n Your password must include a special character (e.g. %,$[:).";
+        }
+        if(password.equals(password.toLowerCase())) {
+            errorMsg += "\n Your password must include a uppercase letter";
 
         }
 
