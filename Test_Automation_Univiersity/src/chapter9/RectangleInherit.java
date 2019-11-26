@@ -1,7 +1,5 @@
 package chapter9;
 
-import chapter11.ShapeAbstract;
-
 public class RectangleInherit {
     protected  double length;
     protected  double width;
