@@ -32,7 +32,7 @@ public class PasswordValidator {
     public static void main(String[] args) {
         passwordRules();
         //login();
-       passwordValidator(password);
+      // passwordValidator();
     }
 
     public void passwordValidator(String text) {
@@ -41,8 +41,10 @@ public class PasswordValidator {
         this.username = username;
         this.password = password;
 
-        System.out.println("What's your username");
         Scanner scanner = new Scanner(System.in);
+
+        System.out.println("What's your username");
+
         username = scanner.next();
         System.out.println("What's your username");
         scanner = new Scanner(System.in);
