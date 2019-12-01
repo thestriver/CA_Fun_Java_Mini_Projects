@@ -29,6 +29,10 @@ public class PasswordValidator {
         return errorMsg;
     }
 
+    public void scannerClose() {
+        scanner.close();
+    }
+
     public static void main(String[] args) {
         passwordRules();
         //login();
