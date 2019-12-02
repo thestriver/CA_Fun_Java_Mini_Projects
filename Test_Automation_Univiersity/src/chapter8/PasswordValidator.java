@@ -19,7 +19,6 @@ public class PasswordValidator {
                 "not contain the username and not be the same as the old password.");
     }
 
-    //public void login() { }
 
     public boolean isValid() {
         return valid;
@@ -36,7 +35,7 @@ public class PasswordValidator {
     public static void main(String[] args) {
         passwordRules();
         //login();
-      // passwordValidator();
+        //passwordValidator();
     }
 
     public void passwordValidator(String text) {
