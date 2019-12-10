@@ -16,9 +16,9 @@ public class FinalGradeBook {
                 firstGrading.put(student.getKey(),secondGrade);
             }
         }
-        System.out.println("Final student grades are:");
+        System.out.println("The final student grades are:");
         firstGrading.forEach(
-                (k,v) -> System.out.println("Student: " + k + " with " + " Grade: " + v)
+                (k,v) -> System.out.println("Student: " + k + " with " + " Grade: " + v + ".")
         );
 
 
