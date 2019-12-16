@@ -34,8 +34,8 @@ public class PasswordValidator {
 
     public static void main(String[] args) {
         passwordRules();
-        //login();
-        //passwordValidator();
+        login();
+        passwordValidator();
     }
 
     public void passwordValidator(String text) {
