@@ -1,5 +1,6 @@
 package chapter7;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class ticketPrinter {
@@ -9,6 +10,7 @@ public class ticketPrinter {
 
     public static void main(String[] args) {
         int[] ticket =  generateNumbers();
+        Arrays.sort(ticket);
         printNumbers(ticket);
 
     }
@@ -16,20 +18,60 @@ public class ticketPrinter {
     public static int[] generateNumbers() {
         int[] ticket = new int[LENGTH];
         Random  random = new Random();
-        int randomNumber = random.nextInt(MAX_NUMBERS) + 1 ;
 
         for (int i = 0; i < LENGTH ; i++) {
-            ticket[i] = randomNumber;
+            int randomNumber;
+
+            //checking if generated number doesn't come up twice
+            do {
+                randomNumber = random.nextInt(MAX_NUMBERS) + 1 ;
+            }while (search(ticket, randomNumber)); //true if its there
+
+            ticket[i] = randomNumber ;
         }
         return ticket;
 
     }
+
+    /**
+     * sequential search on the array to check if number randomly generated exist before
+     * @param array
+     * @return
+     */
+
+    public static boolean search(int[] array , int numberToBeSearched) {
+        for (int value : array) {
+            if (value == numberToBeSearched) {
+                return true;
+            }
+        }
+
+        return false; //i.e not there;
+
+    }
+
+
+    /*  binary search equivalent
+    public static boolean search(int[] array, int numberToBeSearched) {
+        Arrays.sort(array);
+        int index = Arrays.binarySearch(array, numberToBeSearched);
+        if (index >= 0) {
+            return  true;
+        }
+        else {
+            return false;
+        }
+
+
+    }
+     */
 
     public  static void printNumbers(int[] ticket) {
         for (int i = 0; i < LENGTH ; i++) {
             System.out.print(ticket[i] + "|");
         }
     }
+
 
 
 
