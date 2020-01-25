@@ -8,7 +8,11 @@ public class Grades {
 
     public static void main(String[] args) {
         System.out.println("How many grades do you want to enter?");
+<<<<<<< HEAD
         grades = new int[scanner.nextInt()]; //scans for next grade
+=======
+        grades = new int[scanner.nextInt()];
+>>>>>>> eb428968b59a5e7232cd887c60877e5b46508a65
         getGrades();
         System.out.println("Average is " + String.format("%.2f", calculateAverage()));
         System.out.println("Highest value is " + getHighest());

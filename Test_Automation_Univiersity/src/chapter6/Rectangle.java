@@ -1,6 +1,12 @@
 package chapter6;
 
+<<<<<<< HEAD
 public class Rectangle {
+=======
+import chapter11.ShapeAbstract;
+
+public class Rectangle  extends ShapeAbstract {
+>>>>>>> eb428968b59a5e7232cd887c60877e5b46508a65
     private double length;
     private double width;
 
@@ -27,9 +33,16 @@ public class Rectangle {
     }
 
     public Rectangle(double length, double width){
+<<<<<<< HEAD
         setLength(length);
         setWidth(width);
         //or this.length = length; &&  this.width = width;
+=======
+        //setLength(length);
+        //setWidth(width);
+        this.length = length;
+        this.width = width;
+>>>>>>> eb428968b59a5e7232cd887c60877e5b46508a65
     }
 
 
@@ -37,6 +50,7 @@ public class Rectangle {
         return (2 * length) + (2 * width);
     }
 
+<<<<<<< HEAD
 
     public double calculateArea() {
         return length * width;
@@ -46,3 +60,11 @@ public class Rectangle {
 
 
 }
+=======
+    @Override
+    public double calculateArea() {
+        return length * width;
+    }
+}
+
+>>>>>>> eb428968b59a5e7232cd887c60877e5b46508a65
